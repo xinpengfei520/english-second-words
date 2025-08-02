@@ -9,7 +9,7 @@ interface GamePageProps {
   onGameEnd: (results: WordResult[]) => void;
 }
 
-const GamePage: React.FC<GamePageProps> = ({ words, settings, onGameEnd }) => {
+const GamePage: React.FC<GamePageProps> = ({ words, settings: _settings, onGameEnd }) => {
   const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
   const [results, setResults] = React.useState<WordResult[]>([]);
   const [isRecording, setIsRecording] = React.useState(false);
